@@ -1,0 +1,1 @@
+const stock = require("../model/stock")
