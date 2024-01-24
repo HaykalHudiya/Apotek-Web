@@ -10,6 +10,10 @@ const transaction = new schema({
     total_transaksi: { type: Number },
     kode_karyawan: { type: String },
     tanggal_transaksi: { type: Date },
+    stock: {
+        type: schema.Types.ObjectId,
+        ref: 'Stock'
+    }
 });
 
-module.exports = mongoose.model("transaction", transaction)
+module.exports = mongoose.model("transaction", transaction);

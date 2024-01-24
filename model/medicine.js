@@ -9,6 +9,10 @@ const medicine = new schema({
     formulasi: { type: String },
     konsentrasi_obat: { type: String },
     Harga: { type: Number },
+    stock: [{
+        type: schema.Types.ObjectId,
+        ref: 'stock'
+    }]
 });
 
 module.exports = mongoose.model("medicine", medicine)

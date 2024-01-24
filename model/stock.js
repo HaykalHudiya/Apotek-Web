@@ -5,8 +5,10 @@ const stock = new schema({
     Kode: { type: String },
     tanggal_masuk: { type: Date },
     exp: { type: Date },
+    medicine: {
+        type: schema.Types.ObjectId,
+        ref: 'medicine'
+    }
 });
-//Pengurangan stock dari exp tercepat/id terawal
-//validasi stock < pembelian
 
 module.exports = mongoose.model("stock", stock)
