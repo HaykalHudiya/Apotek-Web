@@ -54,6 +54,7 @@ const medicine = require("../model/medicine")
 //         });
 //     }
 // };
+
 exports.postData = async (req, res, next) => {
     const dataMdc = new medicine(req.body);
     await dataMdc.save();
