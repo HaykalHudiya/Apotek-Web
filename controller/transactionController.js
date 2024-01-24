@@ -39,14 +39,14 @@ exports.processTransaction = async (req, res, next) => {
             if (!stock) {
                 return res.status(404).json({
                     success: false,
-                    message: 'Stock not found'
+                    message: 'Stok tidak ditemukan'
                 });
             }
 
             if (stock.quantity < jumlah_obat) {
                 return res.status(400).json({
                     success: false,
-                    message: 'Insufficient stock quantity'
+                    message: 'Jumlah stok tidak mencukupi'
                 });
             }
 

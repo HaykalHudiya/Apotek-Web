@@ -1,7 +1,6 @@
 const stock = require("../model/stock");
 const transaction = require("../model/transaction");
 
-// Create a new stock
 exports.createStock = async (req, res, next) => {
   try {
     const newStock = new stock(req.body);
@@ -39,7 +38,7 @@ exports.getStockById = async (req, res, next) => {
     if (!stock) {
       return res.status(404).json({
         success: false,
-        message: "Stock not found",
+        message: "Stok tidak ditemukan",
       });
     }
     res.status(200).json({
@@ -64,7 +63,7 @@ exports.updateStockById = async (req, res, next) => {
     if (!updatedStock) {
       return res.status(404).json({
         success: false,
-        message: "Stock not found",
+        message: "Stok tidak ditemukan",
       });
     }
     res.status(200).json({
@@ -85,7 +84,7 @@ exports.deleteStockById = async (req, res, next) => {
     if (!deletedStock) {
       return res.status(404).json({
         success: false,
-        message: "Stock not found",
+        message: "Stok tidak ditemukan",
       });
     }
     res.status(200).json({
@@ -108,7 +107,7 @@ exports.decreaseQuantity = async (req, res, next) => {
     if (!stock) {
       return res.status(404).json({
         success: false,
-        message: "Stock not found",
+        message: "Stok tidak ditemukan",
       });
     }
 
