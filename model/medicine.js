@@ -6,8 +6,9 @@ const medicine = new schema({
     Nama: { type: String },
     Jenis: { type: String },
     Merk: { type: String },
-    formulasi: { type: String },
-    konsentrasi_obat: { type: String },
+    Formulasi: { type: String },
+    Konsentrasi_obat: { type: String },
+    Qty: { type: Number, default: 0 },
     Harga: { type: Number },
 });
 

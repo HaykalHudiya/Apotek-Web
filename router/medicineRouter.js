@@ -5,7 +5,8 @@ const medicineController = require("../controller/medicineController");
 
 router.post("/addObat", medicineController.postData);
 router.get("/getObat", medicineController.getData);
-router.get("/getObat/:id", medicineController.getDataById);
-router.post("/updateData/:id", medicineController.updateDataById);
+router.get("/getObat/:kode", medicineController.getDataById);
+// router.get("/getObatN/:nama/:qty", medicineController.getDataByNama);
+router.post("/updateData/:kode", medicineController.updateDataById);
 
 module.exports = router;

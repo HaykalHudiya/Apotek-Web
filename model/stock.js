@@ -3,8 +3,8 @@ const schema = mongoose.Schema;
 
 const stock = new schema({
     Kode: { type: String },
-    tanggal_masuk: { type: Date },
-    exp: { type: Date },
+    Tanggal_masuk: { type: Date, default: Date.now },
+    Exp: { type: Date },
 });
 //Pengurangan stock dari exp tercepat/id terawal
 //validasi stock < pembelian
